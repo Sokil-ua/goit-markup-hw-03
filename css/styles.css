@@ -62,7 +62,28 @@ img {
   color: var(--accent-color);
 }
 
+/* -------------- Setting Container --------------  */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* -------------- Heder --------------  */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   color: var(--black-color);
   font-family: Raleway, sans-serif;
@@ -77,11 +98,38 @@ img {
   color: var(--accent-color);
 }
 
+/* -------------- Nav --------------  */
+.nav-list .link+.link {
+  margin-left: 50px;
+}
+
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
 .nav-list-item.current {
   color: var(--accent-color);
 }
 
+.nav-list-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--text-primary-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
 .nav-list-item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--text-primary-color);
   font-weight: 500;
   font-size: 14px;
@@ -91,6 +139,9 @@ img {
 }
 
 .header-contacts {
+  display: block;
+  padding: 32px 0;
+  
   color: var(--text-p-color);
   font-weight: 500;
   font-size: 14px;
