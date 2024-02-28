@@ -235,15 +235,15 @@ img {
   padding-bottom: 0;
 }
 
-.section-list {
+.list {
   display: flex;
 }
 
-.section-list .item {
+.list .item {
   width: 270px;
 }
 
-.section-list .item:not(:last-child) {
+.list .item:not(:last-child) {
   margin-right: 30px;
 }
 
