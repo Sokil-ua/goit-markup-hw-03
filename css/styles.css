@@ -23,9 +23,30 @@ body {
   background-color: var(--primary-white-color);
   color: var(--text-primary-color);
   font-family: Roboto, sans-serif;
+
   font-size: 14px;
   letter-spacing: 0.03em;
 
+}
+
+
+.nav-list,
+.contacts-list,
+.list {
+  list-style-type: none;
+}
+
+.nav-list-link:hover,
+.nav-list-item:hover,
+.header-contacts:hover,
+.footer-contacts:hover,
+.address:hover,
+.nav-list-link:focus,
+.nav-list-item:focus,
+.header-contacts:focus,
+.footer-contacts:focus,
+.address:focus {
+  color: var(--accent-color);
 }
 
 h1,
@@ -45,24 +66,8 @@ img {
   max-width: 100%;
 }
 
-.nav-list,
-.contacts-list,
-.list {
-  list-style-type: none;
-}
 
-.nav-list-item:hover,
-.header-contacts:hover,
-.footer-contacts:hover,
-.address:hover,
-.nav-list-item:focus,
-.header-contacts:focus,
-.footer-contacts:focus,
-.address:focus {
-  color: var(--accent-color);
-}
-
-/* -------------- Setting Container --------------  */
+/* -------------- SETting Container --------------  */
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -108,7 +113,7 @@ img {
   margin-left: 93px;
 }
 
-.nav-list-item.current {
+.nav-list-link.current {
   color: var(--accent-color);
 }
 
@@ -125,11 +130,11 @@ img {
   text-decoration: none;
 }
 
-.nav-list-item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+.nav-list-item.current {
+  color: var(--accent-color);
+}
 
+.nav-list-item {
   color: var(--text-primary-color);
   font-weight: 500;
   font-size: 14px;
@@ -138,10 +143,20 @@ img {
   text-decoration: none;
 }
 
+/* -------------- Heder contacts --------------  */
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-list .contact+.contact {
+  margin-left: 40px;
+}
+
 .header-contacts {
   display: block;
   padding: 32px 0;
-  
+
   color: var(--text-p-color);
   font-weight: 500;
   font-size: 14px;
@@ -149,6 +164,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -166,10 +182,19 @@ img {
 /* -------------- Стилі index.html --------------  */
 /* -------------- Hero --------------  */
 .hero {
+  padding: 200px 0;
   background-color: var(--hero-footer-color--);
+  text-align: center;
+
 }
 
 .hero-title {
+  max-width: 696px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -180,8 +205,13 @@ img {
 }
 
 .button {
+  display: inline-block;
+
   cursor: pointer;
   font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 4px;
+
 }
 
 .button.primary {
@@ -191,6 +221,8 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  padding: 10px 24px;
+
 }
 
 .button.primary:hover,
@@ -199,7 +231,25 @@ img {
 }
 
 /* -------------- Перелік рішень --------------  */
+.section.features {
+  padding-bottom: 0;
+}
+
+.section-list {
+  display: flex;
+}
+
+.section-list .item {
+  width: 270px;
+}
+
+.section-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -212,11 +262,20 @@ img {
   line-height: 1.71;
 }
 
+
+/* -------------- Чим ми займаємося --------------  */
+.section-list .img-list:not(:last-child) {
+  margin-right: 30px;
+
+}
+
 .team {
   background-color: var(--background-secondary-color);
 }
 
 .list-title {
+  margin-right: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -226,9 +285,23 @@ img {
 
 .card {
   background-color: var(--primary-white-color);
+
+  text-align: center;
+}
+
+.section-card:not(:last-child) {
+  margin-right: 30px;
+
+}
+
+.team-card-desc {
+  padding: 30px 0;
+
 }
 
 .list-item {
+  margin-right: 10px;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
