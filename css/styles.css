@@ -326,8 +326,12 @@ img {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  /* gap: 15px; */
 
+}
+
+.net {
+  gap: 15px;
 }
 
 
